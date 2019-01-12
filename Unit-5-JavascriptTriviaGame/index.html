@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="Assets/JavaScript/main.js"></script>
+
+</head>
+
+<body>
+
+  <h1>Quick Quiz</h1>
+  
+  <form id = "quiz" name = "quiz">
+
+        <p class = "questions">What ocean is to the east of Florida?</p>
+        <input id = "textbox" type = "text" name = "question1">
+        
+        <p class = "questions">Is the sky blue?</p>
+
+        <input type = "radio" id = "mc" name = "question2" value = "True"> True<br>
+        <input type = "radio" id = "mc" name = "question2" value = "False"> False<br>
+        
+        <p class = "questions">Is the country of Canada directly north of the United States?</p>
+        
+        <input type = "radio" id = "mc" name = "question3" value = "True"> True<br>
+        <input type = "radio" id = "mc" name = "question3" value = "False"> False<br>
+
+        <input id = "button" type = "button" value = "I'm done" onclick = "check();">
+
+  </form>
+
+  <div id = "after_submit">
+        <p id = "number_correct"></p>
+        <p id ="number_incorrect"></p>
+        <p id = "message"></p>
+        </div>
+
+        <p><h4>Quiz will end in <span class="js-timeout">60 seconds</span></h4></p>
+
+<!-- <button id="js-startTimer">Start Countdown</button> -->
+
+<button onclick="clock(); document.getElementById('js-timeout').innerHTML='60';">Start counter</button>
+
+<style>
+      body {
+        background-color: lightblue;
+      }
+      </style>
+
+</body>
+
+</html>
