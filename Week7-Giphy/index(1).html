@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sports Giphys</title>
+	<style type="text/css">
+		body{background-color: rgb(0, 255, 13);}
+	</style>
+</head>
+
+<body>
+	<div class="container"> 
+	<div id="SportsButtons">
+	<button class= "Sports" data-name = "Baseball" style="margin : 5px;">Baseball</button>
+	<button class= "Sports" data-name = "Football" style="margin : 5px;">Football</button>
+	<button class= "Sports" data-name = "Basketball" style="margin : 5px;">Basketball</button>
+	<button class= "Sports" data-name = "Hockey" style="margin : 5px;">Hockey</button>
+	<button class= "Sports" data-name = "Soccer" style="margin : 5px;">Soccer</button>
+	<button class= "Sports" data-name = "MMA" style="margin : 5px;">MMA</button>
+	<button class= "Sports" data-name = "Olympic Sports" style="margin : 5px;">Olympic Sports</button>
+	</div>
+	</div>
+	<div id="gifs" style="float:left"></div>
+	<p></p>
+		<h4>Add a Sport</h4>
+		 <form id="gif-form">
+		 	<label for="gif-label"></label>
+		 	<input type="text" value="" id="gif-input"><br><br>
+		 	<input type="submit" name="button" class="Sports" id="theButton" style="margin-left:8px">
+		 </form>
+	</div>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script src="main(1).js"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+    $(".gif").on("click", function() {
+	  // TAKING THE EXAMPLE FROM CLASS I TRIED TO ADD THIS IN HTML IN HOPES OF MAKING MY IMAGES STOP 
+	  //The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+      var state = $(this).attr("data-state");
+      // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+      // Then, set the image's data-state to animate
+      // Else set src to the data-still value
+      if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+      } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }
+    });
+  </script>
+
+
+
+<link rel="stylesheet" href="style(1).css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
