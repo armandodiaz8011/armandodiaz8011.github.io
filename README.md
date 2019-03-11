@@ -1,2 +1,1 @@
-# armandodiaz8011.github.io
-static website
+# Unit12-Bamazon
