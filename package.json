@@ -1,14 +1,16 @@
 {
-  "name": "week12sql",
+  "name": "week13-friendfinder",
   "version": "1.0.0",
-  "description": "",
-  "main": "bamazonCustomer.js",
+  "description": "Week 13 Homework Assignment",
+  "main": "package.json",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "Armando dIAZ",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.2.2"
+    "express": "^4.16.4",
+    "path": "^0.12.7"
   }
 }

@@ -1,1 +1,1 @@
-# Unit12-Bamazon
+This is a homework assignment for Unit 13, coding boot camp. We are using routes along with javascript and html files to create a survey which matches the participant with a friend based on their answers. Assignment is made in jest using famous classical music composers and references to famous Saturday Night Live skits and characters.
