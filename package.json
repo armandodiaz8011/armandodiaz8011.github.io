@@ -1,16 +1,17 @@
 {
-  "name": "week13-friendfinder",
+  "name": "unit14-eatdaburger",
   "version": "1.0.0",
-  "description": "Week 13 Homework Assignment",
-  "main": "package.json",
+  "description": "Eat Da Burger homework assignment",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Armando dIAZ",
+  "author": "Armando Diaz",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "path": "^0.12.7"
+    "express-handlebars": "^3.0.2",
+    "mysql": "^2.16.0"
   }
 }

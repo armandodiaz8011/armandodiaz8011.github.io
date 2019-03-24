@@ -1,17 +1,28 @@
-var express = require('express');
+var express = require("express");
+//var methodOver = require("method-override");
+var bodyParser = require("body-parser");
 
-// Set up Express App
+// creating the express server
 var app = express();
-var PORT = process.env.PORT || 8080;
 
-// Set up Express middleware to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// make sure the port set-up is correct
+var PORT = process.env.PORT || 3000;
 
-require("./routing/apiRoutes")(app);
-require("./routing/htmlRoutes")(app);
+app.use(express.static("public"));
 
-// Start server to begin listening
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+//handlebars
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+var routes = require("./controllers/burgers_controller.js");
+
+app.use("/", routes);
+
 app.listen(PORT, function() {
-    console.log('App listening on PORT ' + PORT);
+  console.log("App listening on PORT: " + PORT);
 });
+
